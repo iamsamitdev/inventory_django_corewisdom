@@ -1,0 +1,47 @@
+{% extends 'backend/main_layout.html' %}
+{% load static %}
+{% block title %} รายการสินค้า {% endblock %}
+{% block content %}
+<div class="card mx-4 my-5">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="mt-1 my-0 py-0">รายการสินค้า</h4>
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="#" class="btn btn-success">เพิ่มสินค้าใหม่</a>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ภาพ</th>
+                <th>ชื่อสินค้า</th>
+                <th>บาร์โค้ด</th>
+                <th>จำนวน</th>
+                <th>ราคา</th>
+                <th>สถานะ</th>
+                <th>จัดการ</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for p in products %}
+                <tr>
+                    <td><img src="{{ p.product_image }}" width="50"></td>
+                    <td>{{ p.product_name }}</td>
+                    <td>{{ p.product_barcode }}</td>
+                    <td>{{ p.product_qty }}</td>
+                    <td>{{ p.product_price }}</td>
+                    <td>{{ p.product_status }}</td>
+                    <td>
+                        <a class="btn btn-sm btn-warning">แก้ไข</a>
+                        <a class="btn btn-sm btn-info">ดู</a>
+                        <a class="btn btn-sm btn-danger">ลบ</a>
+                    </td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

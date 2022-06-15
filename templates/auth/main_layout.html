@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}{% endblock %} - ASP Inventory System</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&family=Nunito+Sans&family=Poppins&display=swap" rel="stylesheet">
+
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="{% static './backend/css/sb-admin-2.css' %}" />
+    <link rel="stylesheet" href="{% static './backend/vendor/fontawesome-free/css/all.css' %}" />
+    <link rel="stylesheet" href="{% static './backend/css/custom.css' %}" />
+
+</head>
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+               <!--Content-->
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% block footer_scripts %}
+    <script src="{% static './backend/vendor/jquery/jquery.js' %}"></script>
+    <script src="{% static './backend/vendor/bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static './backend/vendor/jquery-easing/jquery.easing.js' %}"></script>
+    <script src="{% static './backend/js/sb-admin-2.js' %}"></script>
+    {% endblock footer_scripts %}
+</body>
+</html>

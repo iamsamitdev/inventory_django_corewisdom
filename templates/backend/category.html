@@ -1,0 +1,43 @@
+{% extends 'backend/main_layout.html' %}
+{% load static %}
+{% block title %} หมวดหมู่สินค้า {% endblock %}
+{% block content %}
+<div class="card mx-4 my-5">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="mt-1 my-0 py-0">หมวดหมู่</h4>
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="#" class="btn btn-success">เพิ่มหมวดหมู่ใหม่</a>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ภาพ</th>
+                <th>ชื่อหมวดหมู่</th>
+                <th>เพิ่มโดย</th>
+                <th>เพิ่มเมื่อ</th>
+                <th>สถานะ</th>
+                <th class="text-right">จัดการ</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td><img src="{% static 'backend/img/ip12pro.jpg' %}" width="50"></td>
+                    <td>Mobile</td>
+                    <td>สามิตร โกยม</td>
+                    <td>15/06/2022</td>
+                    <td>1</td>
+                    <td class="text-right">
+                        <a class="btn btn-sm btn-warning">แก้ไข</a>
+                        <a class="btn btn-sm btn-info">ดู</a>
+                        <a class="btn btn-sm btn-danger">ลบ</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

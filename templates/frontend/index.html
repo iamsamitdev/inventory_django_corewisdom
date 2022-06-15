@@ -1,0 +1,38 @@
+{% extends 'frontend/main_layout.html' %}
+{% load static %}
+{% block title %} หน้าหลัก {% endblock %}
+{% block content %}
+
+<div id="carouselId" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselId" data-slide-to="1"></li>
+        <li data-target="#carouselId" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="{% static 'images/slide/food1.jpg' %}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slide/food2.jpg' %}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slide/food3.jpg' %}" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+</div>
+
+<div class="container-fluid">
+    <h3 class="my-4">หน้าหลัก</h3>
+    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, aut omnis suscipit animi laborum fuga nostrum earum molestiae sequi iusto cupiditate? Cupiditate magni debitis fugiat dolore odio ut, pariatur nesciunt minima inventore molestias minus perferendis rem esse amet illo officiis repudiandae voluptas quidem cumque aperiam iusto corrupti nisi consectetur nemo. Molestias omnis adipisci maiores accusamus eligendi numquam eaque aspernatur ex, nisi natus vero laboriosam ut repellat a impedit, amet et consequuntur reiciendis. Illum recusandae incidunt reiciendis veniam earum similique commodi, voluptatem nulla illo ut quam, voluptate, quaerat rem ratione enim? Quidem dignissimos sequi ipsa, consectetur nostrum sit obcaecati voluptatum fugiat.</p>
+
+    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, aut omnis suscipit animi laborum fuga nostrum earum molestiae sequi iusto cupiditate? Cupiditate magni debitis fugiat dolore odio ut, pariatur nesciunt minima inventore molestias minus perferendis rem esse amet illo officiis repudiandae voluptas quidem cumque aperiam iusto corrupti nisi consectetur nemo. Molestias omnis adipisci maiores accusamus eligendi numquam eaque aspernatur ex, nisi natus vero laboriosam ut repellat a impedit, amet et consequuntur reiciendis. Illum recusandae incidunt reiciendis veniam earum similique commodi, voluptatem nulla illo ut quam, voluptate, quaerat rem ratione enim? Quidem dignissimos sequi ipsa, consectetur nostrum sit obcaecati voluptatum fugiat.</p>
+</div>
+
+{% endblock %}
