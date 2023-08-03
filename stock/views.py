@@ -31,12 +31,11 @@ def login_request(request):
 
         user = authenticate(username=username, password=password)
 
-        if user is not None:
-            login(request,user)
-            # return HttpResponseRedirect("backend/dashboard")
-            return redirect("dashboard")
-        else:
+        if user is None:
             return HttpResponse("Incorrect user<br><a href=""/login"">Get back login page</a>")
+        login(request,user)
+        # return HttpResponseRedirect("backend/dashboard")
+        return redirect("dashboard")
     return render(request, 'auth/login.html')
 
 
